@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import datetime
+import xml.etree.ElementTree as ET
 
 # Function to scrape a single article
 def scrape_article(article_url):
@@ -50,21 +51,25 @@ def crawl_section(section_url):
     except Exception as e:
         print(f"Error crawling section {section_url}: {e}")
         return []
-
+        
+def fetch_sitemap(url): #a function to fetch the urls from the sitemap.xml url, basically convert the xml to individual urls
+    response = requests.get(url)
+    
+    # Check if the request was successful
+    if response.status_code == 200:
+        # Parse the XML content
+        root = ET.fromstring(response.content)
+        
+        # Find all <loc> tags in the sitemap and extract their URLs
+        urls = [url.text for url in root.findall(".//{http://www.sitemaps.org/schemas/sitemap/0.9}loc")]
+        
+        return urls
+    else:
+        print(f"Failed to fetch sitemap. HTTP Status code: {response.status_code}")
+        return []
 # Main function to crawl AajTak and save articles in JSON format
 def main():
-    sitemap_urls = [
-        "https://www.aajtak.in",  # Main page
-        "https://www.aajtak.in/world",  # World news
-        "https://www.aajtak.in/sports",  # Sports news
-        "https://www.aajtak.in/entertainment",  # Entertainment news
-        "https://www.aajtak.in/business",  # Business news
-        "https://www.aajtak.in/auto",  # Auto news
-        "https://www.aajtak.in/technology",  # Technology news
-        "https://www.aajtak.in/crime",  # Crime news
-        "https://www.aajtak.in/religion",  # Religion news
-        "https://www.aajtak.in/lifestyle",  # Lifestyle news
-    ]
+    sitemap_urls = fetch_sitemap('https://www.aajtak.in/rssfeeds/sitemap.xml')
     
     all_articles = []
     
