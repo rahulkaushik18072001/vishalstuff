@@ -1,0 +1,260 @@
+from transformers import pipeline
+import nltk
+from nltk.tokenize import sent_tokenize
+import textwrap
+
+class TextSummarizer:
+    def __init__(self, model_name="facebook/bart-large-cnn"):
+        """
+        Initialize the summarizer with a specified model.
+        Default is BART, which is good for news article summarization.
+        """
+        self.summarizer = pipeline("summarization", model=model_name)
+        # Download necessary NLTK data
+        try:
+            nltk.data.find('tokenizers/punkt')
+        except LookupError:
+            nltk.download('punkt')
+
+    def chunk_text(self, text, max_chunk_size=1024):
+        """
+        Split text into smaller chunks that won't exceed the model's token limit.
+        Uses sentence tokenization to avoid cutting sentences in the middle.
+        """
+        sentences = sent_tokenize(text)
+        chunks = []
+        current_chunk = []
+        current_size = 0
+        
+        for sentence in sentences:
+            sentence_size = len(sentence)
+            if current_size + sentence_size <= max_chunk_size:
+                current_chunk.append(sentence)
+                current_size += sentence_size
+            else:
+                if current_chunk:
+                    chunks.append(' '.join(current_chunk))
+                current_chunk = [sentence]
+                current_size = sentence_size
+        
+        if current_chunk:
+            chunks.append(' '.join(current_chunk))
+        
+        return chunks
+
+    def summarize(self, text, max_length=150, min_length=50):
+        """
+        Summarize the input text.
+        
+        Args:
+            text (str): Input text to summarize
+            max_length (int): Maximum length of the summary in words
+            min_length (int): Minimum length of the summary in words
+            
+        Returns:
+            str: Generated summary
+        """
+        # Split text into chunks if it's too long
+        chunks = self.chunk_text(text)
+        summaries = []
+        
+        for chunk in chunks:
+            summary = self.summarizer(chunk, 
+                                    max_length=max_length, 
+                                    min_length=min_length, 
+                                    do_sample=False)
+            summaries.append(summary[0]['summary_text'])
+        
+        # Combine all summaries
+        final_summary = ' '.join(summaries)
+        
+        # Clean up the summary by wrapping text
+        wrapped_summary = textwrap.fill(final_summary, width=80)
+        return wrapped_summary
+
+def main():
+    # Example usage
+    sample_text = """
+    Live Updates 
+             Powerful winds are prolonging the battle for firefighters combating the Los Angeles wildfires, which have killed at least 25 people. More than 6 million people are under a critical fire threat across a large swath of Southern California, including in cities outside of Los Angeles County.
+     
+             A CNN analysis of the most recent data available from the 10 largest US cities and other comparable departments shows the Los Angeles Fire Department is less staffed than almost any other major city. Experts have said no fire department in the world would have been able to take on the combination of factors that resulted in the blazes.
+     
+             The Eaton and Palisades fires are now the most destructive and second-most destructive wildfires, respectively, in Southern California history. The fires over the past week were larger and hotter than they would have in a world without planet-warming fossil fuel pollution, a UCLA analysis suggests.
+     
+             For ways to help Los Angeles County residents, visit CNN Impact Your World.
+     
+            CNN has spoken with firefighters in California who have been sounding the alarm about staffing shortages as the state grapples with a major fire disaster.
+     
+            Heres what they had to say:
+     
+            As many as 12,000 homes, businesses and other structures may have been destroyed in the wildfires raging in Los Angeles County, rendering entire communities ashen piles of rubble.
+     
+            But here and there amid the Palisades and Eaton fires, in places not protected by the private fire crews of the wealthy, a home survived  an apparent miracle  raising questions about how one structure can make it through while others within shouting distance burn to the ground.
+     
+            While it may be impossible ever to know for sure, several variables could be in play for those homes that survive, experts say: a smart, fire-resilient design; an owners preparation, like clearing away flammable vegetation; the sometimes-unknown intervention of firefighters; the wind and weather; or, frankly, luck.
+     
+            One element is the design, construction and preparation of the building. The California Department of Forestry and Fire Protection is increasingly encouraging homeowners to harden their homes, implementing features to help fireproof them.
+     
+            This can include building or retrofitting key parts of a home  like roof, walls, windows, decks, garages, fences and gutters, among others  with more ember- and flame-resistant materials, like concrete and steel.
+     
+            Architect Greg Chasen believes a number of these features helped save a home he designed and helped build just last year that survived the Palisades Fire: He posted on X a photo of the home, showing it almost untouched, standing pristinely next door to its neighbor, now a charred husk with a burned-out vehicle sitting on its frame in the driveway.
+     
+Read more about other elements that helped protect some homes and not others here.
+ 
+            The Los Angeles City Council adopted a number of resolutions on Tuesday to help residents recover from the damage of the wildfires and return to normalcy, according to the Los Angeles Times.
+ 
+            The measures passed include speeding up federal emergency funds, assessing the potential for mudslides, and protecting residents from evictions and price gouging, especially evacuees and pet owners, according to the LA Times.
+     
+            One proposal would pause rent increases and bar evictions for a year for tenants experiencing hardship after the fires, but the motion was referred to committee.
+     
+        An early estimate has placed the damage to public property and infrastructure at approximately $360 million, said the resolution regarding federal funds, adding these gaps in funding could affect essential services such as public safety, libraries, parks, homeless services.
+     
+ 
+            Separately, the LA County Board of Supervisors ordered the creation of a fund to help residents or businesses who lost their livelihoods or homes on Tuesday.
+     
+            The board voted to give the Chief Executive Officer a week to draft the parameters of the fund, which which may include options to partner with philanthropy, receive private sector donations and provide relief and support to those impacted by the windstorm and critical fire events, according to the meeting agenda.
+     
+        We know that the list of needs is deep and will run the gamut from childcare to housing assistance to wage reimbursement, said Kathryn Barger, chair of the board, at the meeting. The fund will give an opportunity for funders to support the tremendous needs throughout the county.
+     
+ 
+            The Los Angeles Fire Department did not pre-position about 1,000 available firefighters and dozens of fire engines on January 7 as winds picked up, ahead of the destructive Palisades Fire, the Los Angeles Times reported on Tuesday, citing interviews with current and former LAFD officials and internal LAFD records.
+     
+            The report claimed the LAFD staffed five of more than 40 water-carrying engines that were available last Tuesday, before the fires spun out of control. It also claimed fire officials did not order firefighters to remain on duty for a second shift, which would have doubled the number of staff on hand.
+     
+            CNN reached out to the LAFD for comment on Tuesday.
+     
+            In a statement to the LA Times, LAFD Chief Kristin Crowley defended their response and said officials had to be strategic with limited resources.
+     
+            The plan that they put together, I stand behind, because we have to manage everybody in the city, Crowley told the LA Times.
+     
+            She also claimed that budget cuts had slashed the LAFDs mechanic positions  leaving some of the ready reserve engines out of service.
+     
+For context: Questions over LAs preparedness for the firestorm have led to political finger-pointing.
+     
+            LA Mayor Karen Bass has faced criticism for recent budget cuts at the LAFD, though she claimed the cuts really did not affect what weve been going through.
+     
+            The National Weather Service (NWS) has reinstated the Particularly Dangerous Situation (PDS) red flag warnings for parts of Los Angeles and Ventura on Wednesday as gusty winds are expected.
+     
+            The warnings had been dropped on Tuesday due to lower-than-expected winds.
+     
+            While Wednesdays winds are not expected to be as strong as last week, winds across higher elevations could exceed 50 miles per hour. Widespread lower elevations could also see wind gusts up to 50 mph which could cause any new fires to quickly spread out of control.
+     
+            While the PDS red flag warning will continue to cover the Eaton Fire, the weather service said winds in the Palisades fire area are expected to remain on the lower side of wind forecast.
+     
+The PDS red flag warning covers the following areas:
+ 
+            The majority of the regular red flag warnings are set to expire across Southern California by 6 p.m. PT Wednesday.
+     
+            Conditions are expected to begin to improve Thursday with winds expected to continue to decrease. The current forecast calls for gusts of 30 mph on Thursday and for the remainder of the red flag warnings to expire.
+     
+            The preliminary forecast through the weekend is for cooler and more humid air to move over Southern California, which can help to alleviate some of the dry air that has been ongoing across the region.
+     
+            While this weather is more favorable, the primary source of relief would come in the form of rounds of rainfall over the region. Unfortunately, rainfall is not in the forecast for the next seven days and doesnt seem likely through the end of the month. Below average rainfall is expected through at least the first week of February, which is usually Southern Californias wettest month.
+     
+            Intuit Dome, the home of the LA Clippers in Inglewood, California, will host FireAid, a benefit concert aimed at raising funds for rebuilding communities devastated by wildfires in Los Angeles, according to Live Nation, the live entertainment promoting company. The event is set for January 30.
+     
+            Together with his wife Shelli, Irving Azoff, who represents a roster of iconic artists including The Eagles, Fleetwood Mac and Maroon 5, among others, is spearheading the initiative in collaboration with Live Nation and AEG Presents, which belongs to Anschutz Entertainment Group. Azoffs son, Jeffrey, manages former One Directions Harry Styles, fueling speculation about potential hosts for the concert. Azoff is partly owner of MSG, the entertainment company operating the Madison Square Garden in New York.
+     
+            Live Nation says the lineup for the concert, described as an evening of music and solidarity, will be announced soon.
+     
+            Proceeds from the concert will go towards a nonprofit created for this event that will focus on rebuilding infrastructure, supporting displaced families, and advancing fire prevention technologies and strategies to ensure Southern California is better prepared for fire emergencies, the release says.
+     
+            The announcement follows a pledge from The Recording Academy and nonprofit MusiCares, which committed $1 million to support music professionals impacted by the wildfires, according to a release.
+     
+            The entire Grammy family is shocked and deeply saddened by the situation unfolding in Los Angeles, Harvey Mason Jr., CEO of the Recording Academy and MusiCares said in a statement. The music community is being so severely impacted, but we will come together as an industry to support one another.
+     
+            As firefighters battle several blazes across metro Los Angeles, high wind conditions across the region in the hours ahead remain a challenge.
+     
+            Forecasters expected winds to uptick from Tuesday night through Wednesday. More than 6 million people are under a critical fire threat Wednesday across several counties in Southern California, including cities outside of Los Angeles County such as Anaheim, Riverside, San Bernardino and Oxnard.
+     
+            Northeast winds at 20 to 30 mph are forecast with gusts of 50 mph possible, the National Weather Service cautioned.
+     
+Here are the latest developments:
+ 
+Death toll climbs: The fires have killed at least 25 people  nine in the Palisades Fire and 16 in the Eaton Fire.
+     
+Air quality remains low: People in areas impacted by ash from the wildfires should wear proper respiratory masks to help protect against potential health problems, a city health official said. A windblown dust and ash advisory covering close to 17 million residents is in effect through 7 p.m. Wednesday.
+     
+State combats predatory real estate offers: Gov. Gavin Newsom issued an executive order preventing aggressive and unsolicited cash offers under market value to wildfire victims in 15 zip codes in the Los Angeles area, saying, We will not allow greedy developers to rip off these working-class communities at a time when they need more support than ever before.
+     
+Temporary relocation of schools: Two schools in the Palisades that burned down will resume classes on temporary campuses, as the Los Angeles Unified School District works to return to normalcy, the district said. Last week, the superintendent said at least a third of all students in the district  the second-largest school district nationwide and the largest in California  are being impacted in some way by the fires.
+     
+Impacts of climate change: The fires over the past week were larger and burned hotter than they would have in a world without planet-warming fossil fuel pollution, a UCLA analysis suggests. The report is clear in saying the fires likely still would have occurred in a world without climate pollution, but it concludes they would have been somewhat smaller and less intense.
+     
+            CNNs Josh Campbell reports on the controversy surrounding some private firefighters being hired by some neighborhoods and insurance companies to step in for a Los Angeles Fire Department stretched thin.
+     
+            Longtime Altadena resident Kimberly Winiecki, 77, has been identified as a victim of the Eaton Fire, her close friend Jeannette McMahon told CNN.
+     
+            McMahon last saw Winiecki on January 6, the day before the Eaton Fire broke out, she said.
+     
+            We were good friends. On Monday night we had dinner, well, what we didnt know was going to be our farewell dinner, McMahon said.
+     
+            McMahon told CNN she tried to help Winiecki evacuate when the fire broke out.
+     
+            The winds picked up on Tuesday and then around 8 p.m. I could see the fire from my home, so I texted Kim and said, Kim, I need to come pick you up, McMahon said. She responded and said Im fine. Im calm.
+     
+            McMahon said she was unable to get in touch with Winiecki after that day but eventually spoke with Winieckis brother who informed her officials had contacted him to notify him of Winieckis death.
+     
+            She was a very intelligent woman, just so sensitive and expressive. She was a writer and a delight to be with. It was such a joy to be around her, McMahon said about her friend.
+     
+            For the last 20 years, McMahon said she and Winiecki met at least twice a week.
+     
+            I had many parties; dinner parties and gatherings and Kim was a part of them. She didnt like being in pictures, but she used to love taking photos of our gatherings and table settings and sending the photos to her sister. Ill miss her insightfulness and wittiness.
+     
+            Republicans in Congress will consider culpability when approving any disaster aid for Democratic-led California, said House Speaker Mike Johnson Tuesday, as deadly wildfires ravage Los Angeles County for a second week.
+     
+            Were all Americans, and the Americans there, that are affected, desperately need and deserve help, Johnson said during a news conference, but noted concerns over how California is governed, at the state and local levels.
+     
+        To the extent that there is complicity involved in the scope of the disaster, then we think thats something that needs to be carefully regarded. 
+     
+ 
+            Any wildfire aid package should have conditions, the speaker told reporters, including CNNs Manu Raju, on Monday.
+     
+            If Gavin Newsom and local leaders made decisions that made this disaster exponentially worse  which it appears there were  should there be some consequence of that? Should there be some kind of safeguard on the funding? Johnson told reporters. People in other states should not have to pay for bad decisions made in California, Johnson said.
+     
+            While Johnson did not elaborate on potential conditions, he said Republicans do not intend to leave Americans behind.
+     
+            We may need to think carefully about safeguards, Johnson added, pointing to the conditions on flood insurance included in the Hurricane Katrina aid package for his home state of Louisiana two decades ago.
+     
+            The widespread destruction caused by the Eaton and the Palisades fires have led Cal Fire to rank them as the first and second-most destructive fires in Southern California, respectively.
+     
+            The Eaton Fire has taken the position of the most  destructive and deadly fire in Southern California history, according to  CalFire. The fire has burned over 14,000 acres and 7,000 structures,  according to the agencys count. It has killed 17 people, according to  the Los Angeles County Medical Examiners office.
+     
+            The Palisades Fire ranks as the second-most destructive fire  in Southern California history, with more than 23,000 acres and 5,000  structures burned. The county medical examiners office has confirmed  the Palisades Fire has killed at least eight people.
+     
+            The previous record for the most deadly and destructive fire in Southern California was the Cedar Fire in October 2003. This fire burned nearly 3,000 structures and killed 15 people in San Diego County.
+     
+            A CNN analysis of the most recent data available from the 10 largest US cities and other comparable departments shows the Los Angeles Fire Department is less staffed than almost any other major city.
+     
+            Less than a month before the fires swept across Los Angeles  County, a group of longtime firefighters gathered at City Hall to plead  for more resources, according to the report by CNN Investigates.
+     
+            Im going to say what people cant say, said Freddy Escobar,  president of the citys fire union and a veteran firefighter. If we cut  one position, if we close one station  the residents of Los Angeles  are going to pay the ultimate sacrifice, and someone will die.
+     
+            Experts have said no fire department in the world would have  been able to take on such a perfect storm of conditions that resulted  in LAs devastating blazes  which have burned more than 40,000 acres,  destroyed more than 12,000 structures and caused at least 24 deaths.
+     
+            But images of residents in some neighborhoods trying to save  homes with garden hoses and no firefighters in sight have sparked a new  debate over whether city officials should have planned better and  invested more in the LAFD, and what should be done to become better  positioned for the next emergency.
+     
+            Despite being located in one of the most fire-prone areas in  the country, the LAFD has less than one firefighter for every 1,000  residents, the data shows.
+     
+            That compares to cities such as Chicago, Dallas and Houston, where staffing is closer to two firefighters for the same number of residents. Of the largest cities, only San Diego has fewer firefighters per capita.
+      2025 Cable News Network. A Warner Bros. Discovery Company. All Rights Reserved.  CNN Sans  &  2016 Cable News Network.
+    """
+    
+    # Initialize summarizer
+    summarizer = TextSummarizer()
+    
+    # Generate summary
+    summary = summarizer.summarize(
+        sample_text,
+        max_length=150,  # Adjust these parameters based on your needs
+        min_length=50
+    )
+    
+    print("Original text length:", len(sample_text.split()))
+    print("\nSummary:")
+    print(summary)
+    print("\nSummary length:", len(summary.split()))
+
+if __name__ == "__main__":
+    main()
