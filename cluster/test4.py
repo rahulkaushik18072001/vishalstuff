@@ -6,14 +6,12 @@ import spacy
 import pandas as pd
 import json
 
-def cluster_news_articles(articles, min_similarity=0.3, min_articles=2):
+def cluster_news_articles(articles, min_similarity=0.5, min_articles=2):  # Increased min_similarity
     """
-    Cluster news articles based on 
-    
-     similarity using TF-IDF and DBSCAN.
+    Cluster news articles based on content similarity using TF-IDF and DBSCAN.
     
     Parameters:
-    articles (list): List of dictionaries with 'title' and 'summary' keys
+    articles (list): List of dictionaries with 'title' and 'content' keys
     min_similarity (float): Minimum similarity threshold (0-1)
     min_articles (int): Minimum articles to form a cluster
     
@@ -41,9 +39,9 @@ def cluster_news_articles(articles, min_similarity=0.3, min_articles=2):
         
         return " ".join(important_tokens)
     
-    # Combine title and summary with more weight on title
+    # Combine title and content with more weight on title
     processed_texts = [
-        preprocess_text(article['title'] + " " + article['title'] + " " + article['summary'])
+        preprocess_text(article['title'] + " " + article['title'] + " " + article['content'])
         for article in articles
     ]
     
@@ -58,6 +56,10 @@ def cluster_news_articles(articles, min_similarity=0.3, min_articles=2):
     # Calculate similarity matrix
     similarity_matrix = cosine_similarity(tfidf_matrix)
     
+    # Print similarity matrix for debugging
+    print("Similarity Matrix:")
+    print(np.round(similarity_matrix, 2))
+    
     # Cluster using DBSCAN
     eps = 1 - min_similarity  # Convert similarity threshold to distance
     clustering = DBSCAN(
@@ -65,6 +67,9 @@ def cluster_news_articles(articles, min_similarity=0.3, min_articles=2):
         min_samples=min_articles,
         metric='precomputed'
     ).fit(1 - similarity_matrix)  # Convert similarity to distance
+    
+    # Print clustering labels for debugging
+    print("\nClustering Labels:", clustering.labels_)
     
     # Extract key terms for each cluster
     def get_cluster_keywords(cluster_docs, top_n=5):
@@ -89,6 +94,7 @@ def cluster_news_articles(articles, min_similarity=0.3, min_articles=2):
     clusters = {}
     for idx, label in enumerate(clustering.labels_):
         if label == -1:  # Noise points
+            print(f"\nArticle marked as noise: {articles[idx]['title']}")
             continue
             
         if label not in clusters:
@@ -101,16 +107,23 @@ def cluster_news_articles(articles, min_similarity=0.3, min_articles=2):
     
     # Add key terms for each cluster
     for label in clusters:
-        cluster_texts = [art['summary'] for art in clusters[label]['articles']]
+        cluster_texts = [art['content'] for art in clusters[label]['articles']]
         clusters[label]['key_terms'] = get_cluster_keywords(cluster_texts)
     
     return clusters
+
+# Read and process articles
 with open('articles.json') as f:
     sample_articles = json.load(f)
 
+print(f"Total number of articles: {len(sample_articles)}\n")
 
-clustered_news = cluster_news_articles(sample_articles)
-for cluster_label, cluster_data in clustered_news.items():
-    print(f"Cluster {cluster_label} - Key terms: {cluster_data['key_terms']}")
-    for article in cluster_data['articles']:
-        print(f"\t{article['title']}")
+# Try different similarity thresholds
+for similarity in [0.3, 0.5, 0.7]:
+    print(f"\nTrying with minimum similarity: {similarity}")
+    clustered_news = cluster_news_articles(sample_articles, min_similarity=similarity)
+    print("\nResults:")
+    for cluster_label, cluster_data in clustered_news.items():
+        print(f"\nCluster {cluster_label} - Key terms: {cluster_data['key_terms']}")
+        for article in cluster_data['articles']:
+            print(f"\t{article['title']}")

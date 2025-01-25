@@ -1,0 +1,775 @@
+{
+  "unclustered": {
+    "articles": [
+      {
+        "title": "Techie Atul Subhash's Son To Stay With His Mother, Supreme Court Decides",
+        "content": "The Supreme Court on Monday afternoon directed the son of Atul Subhash - the Bengaluru techie who died by suicide - and Nikita Singhania - his estranged wife, whom he had accused of harassment leading to his death - be produced before it.",
+        "confidence": 0.0
+      },
+      {
+        "title": "\"Hundreds Of Patients On Footpath\": Rahul Gandhi Writes To Centre, Atishi",
+        "content": "Rahul Gandhi has written to Health Minister JP Nadda and Delhi Chief Minister Atishi, flagging the plight of hundreds of patients and their family members huddled on the footpath outside AIIMS and sought concrete steps to resolve the crisis.",
+        "confidence": 0.0
+      },
+      {
+        "title": "Rahul writes to Health Minister, Delhi CM over AIIMS patients’ plight",
+        "content": "“As a first step, the new AllMS facilities across the country should be operationalised at the earliest,” he said.",
+        "confidence": 0.0
+      },
+      {
+        "title": "Caste Hindu youngsters beat up SC boy near Usilampatti, T.N.",
+        "content": "A few months ago, the SC boy, from Sangampatti near Chellampatti, and the suspects had a quarrel during a temple festival",
+        "confidence": 0.0
+      },
+      {
+        "title": "Are there guidelines to ensure equal rights for foreign nationals in prisons, Madras HC asks Union Home Ministry",
+        "content": "Justices S.M. Subramaniam and M. Jothiraman suo motu include the Home Ministry as a respondent to a case and seek its response by next week",
+        "confidence": 0.0
+      },
+      {
+        "title": "Congress MLC Yathindra Siddaramaiah terms ED statement on provisional attachment of immovable properties in MUDA probe as ‘misleading’",
+        "content": "The provisional attachment of immovable properties pertains to a different case altogether, but the ED has been made to deliberately issue a ‘misleading’ statement to make it look like the attached property belongs to Karnataka CM Siddaramaiah",
+        "confidence": 0.0
+      },
+      {
+        "title": "Double Olympic medallist Neeraj Chopra ties knot with tennis player Himani Mor",
+        "content": "The 27-year-old Chopra announced the marriage with the 25-year-old Himani Mor, who hails from Haryana's Sonipat, on his social media handles",
+        "confidence": 0.0
+      },
+      {
+        "title": "Doctors slam MYL leader’s remarks",
+        "content": "",
+        "confidence": 0.0
+      },
+      {
+        "title": "PMK and VCK engage in a verbal spat over violence in Nemili village",
+        "content": "",
+        "confidence": 0.0
+      },
+      {
+        "title": "A school that teaches moral lessons and cultural heritage",
+        "content": "",
+        "confidence": 0.0
+      },
+      {
+        "title": "Left parties condemn Amit Shah’s ‘remarks’ against Dr. B.R. Ambedkar",
+        "content": "",
+        "confidence": 0.0
+      },
+      {
+        "title": "Bottle filled with kerosene oil hurled at a grocery shop in Karur",
+        "content": "",
+        "confidence": 0.0
+      },
+      {
+        "title": "Kalasa SI suspended",
+        "content": "",
+        "confidence": 0.0
+      }
+    ],
+    "keywords": [
+      "unclustered"
+    ],
+    "article_count": 13
+  },
+  "cluster_0": {
+    "articles": [
+      {
+        "title": "RG Kar Case Convict Gets Life Term, Judge Says Case \"Not Rarest Of Rare\"",
+        "content": "RG Kar Hospital Rape-Murder Convict Sanjay Roy Gets Life Sentence",
+        "confidence": 1.0
+      },
+      {
+        "title": "Kerala Woman, Who Killed Boyfriend With Poisoned Drink, Sentenced To Death",
+        "content": "In 2022, Greeshma poisoned her boyfriend with an ayurvedic tonic laced with paraquat, a herbicide.",
+        "confidence": 1.0
+      },
+      {
+        "title": "\"If Case Stayed With Us...\": Mamata Banerjee Reacts To RG Kar Case Verdict",
+        "content": "Kolkata Police would have ensured death penalty for the convict in RG Kar rape and murder case, but the probe was taken away and handed over to the CBI, West Bengal Chief Minister Mamata Banerjee said today",
+        "confidence": 1.0
+      },
+      {
+        "title": "AgustaWestland helicopter scam: SC fixes Christian Michel’s bail hearing on February 18",
+        "content": "The Central Bureau of Investigation said the investigation was complete; the court gave the Central agency three weeks, and no more, to file its counter affidavit",
+        "confidence": 0.9699534435376861
+      },
+      {
+        "title": "Kolkata rape-murder case: BJP criticises life imprisonment verdict for convict as 'travesty of justice'",
+        "content": "BJP's IT department head Amit Malviya called for appealing the judgment and for probe agencies to investigate the role of the then Kolkata Commissioner and CM Mamata Banerjee for allegedly destroying the evidence",
+        "confidence": 0.9868907466031588
+      },
+      {
+        "title": "KSEAB’s move to charge fee for corrections in II PUC marksheet opposed by students in Karnataka",
+        "content": "All India Democratic Students’ Organization says fixing a fee for correction of marksheet affects poor parents and students who are already in financial difficulty",
+        "confidence": 0.9915151488313452
+      },
+      {
+        "title": "Kerala mother accused of child’s murder attempts to take own life ahead of trial",
+        "content": "Saranya, a native of Thayyil in Kannur, is undergoing treatment at Kozhikode Medical College Hospital where her condition is reported to be stable",
+        "confidence": 0.959421157525539
+      },
+      {
+        "title": "R.G. Kar rape and murder: Sessions Court awards life imprisonment to convict Sanjay Roy",
+        "content": "Judge  Anirban Das said that he does not think it is rarest of rare case; the Court directed that the victim’s parents will get a compensation of ₹17 lakh",
+        "confidence": 1.0
+      },
+      {
+        "title": "Supreme Court to hear cop's plea after FIR against IPS officer whom she accuses of rape quashed",
+        "content": "Supreme Court adjourns hearing on plea against quashed FIR by Bihar Police woman officer accusing IPS officer of rape",
+        "confidence": 1.0
+      },
+      {
+        "title": "Supreme Court sets March 18 deadline for Centre’s decision on Rajoana mercy plea",
+        "content": "Rajoana has been in prison for 29 years and on death row since 2007 in the Beant Singh assassination case.",
+        "confidence": 1.0
+      },
+      {
+        "title": "MCOCA case: Delhi HC seeks police stand on bail plea of AAP MLA Naresh Balyan",
+        "content": "",
+        "confidence": 1.0
+      },
+      {
+        "title": "Sharon Raj murder case: Kerala court awards death sentence to Greeshma",
+        "content": "Greeshma’s uncle Nirmalakumaran Nair, the third accused in the case, sentenced to three years of imprisonment",
+        "confidence": 1.0
+      },
+      {
+        "title": "Kolkata doctor rape and murder case sentencing highlights: Court convicts Sanjay Roy to life in prison",
+        "content": "Kolkata court says R.G. Kar doctor’s rape-murder case does not fall under ‘rarest of the rare’ category",
+        "confidence": 1.0
+      },
+      {
+        "title": "Uttam slams BRS for not issuing ration cards, announces 40 lakh new ration cards from Jan. 26",
+        "content": "",
+        "confidence": 1.0
+      },
+      {
+        "title": "Central prison inmate attempts to end life by consuming iron nail",
+        "content": "",
+        "confidence": 1.0
+      },
+      {
+        "title": "Youth held on rape charge",
+        "content": "",
+        "confidence": 0.9699534435376861
+      },
+      {
+        "title": "Cusat stampede: Chargesheet names 3 faculty members as accused",
+        "content": "",
+        "confidence": 1.0
+      },
+      {
+        "title": "Plea to resolve 2022 AP police constable recruitment row by awarding grace marks to candidates",
+        "content": "",
+        "confidence": 1.0
+      },
+      {
+        "title": "R.G. Kar rape and murder: quantum of sentence for convict on January 20",
+        "content": "The mother of the former civic police volunteer who has been convicted of the gruesome crime said she has no problem if the court hangs him for the crime",
+        "confidence": 1.0
+      }
+    ],
+    "keywords": [
+      "rape",
+      "case",
+      "murder",
+      "kar",
+      "life"
+    ],
+    "article_count": 19
+  },
+  "cluster_6": {
+    "articles": [
+      {
+        "title": "\"When Sun Sets Tomorrow...\": Trump's Big Vows Before Taking Over As President",
+        "content": "Addressing his thousands of supporters who braved long waits in freezing temperatures, rain and snow to attend a \"victory rally\" on Sunday, President-elect Donald Trump promised to swiftly fulfil the central promise of his presidential campaign.",
+        "confidence": 0.8940778533184994
+      },
+      {
+        "title": "Donald Trump Inauguration LIVE: 200 Executive Orders On Trump's Day 1 Agenda",
+        "content": "Donald Trump Presidential Inauguration LIVE Updates: Donald Trump will be sworn in as the 47th President of the United States on Monday at 12 pm local time (10:30 IST) at a ceremony held inside the Rotunda of the US Capitol.",
+        "confidence": 1.0
+      },
+      {
+        "title": "India-U.S. relationship truly an enduring story of love for ages: Eric Garcetti",
+        "content": "Mr. Garcetti is stepping down as the ambassador, paving the way for the Trump administration to appoint its new envoy to New Delhi",
+        "confidence": 0.6409506338756459
+      },
+      {
+        "title": "Mukesh Ambani, wife Nita meet U.S. President-elect Trump ahead of inauguration",
+        "content": "The Ambanis expressed their hope for deeper India-U.S. relations to the president-elect and wished him a transformative second term of leadership at the White House",
+        "confidence": 0.9184326080421396
+      },
+      {
+        "title": "Jaishankar holds bilateral meetings with counterparts from Japan, Australia in Washington",
+        "content": "All three QUAD Foreign Ministers are here to attend the inauguration of Trump as the 47th president of the U.S.",
+        "confidence": 1.0
+      }
+    ],
+    "keywords": [
+      "trump",
+      "president",
+      "donald",
+      "inauguration",
+      "elect"
+    ],
+    "article_count": 5
+  },
+  "cluster_5": {
+    "articles": [
+      {
+        "title": "UPI Payment For Paratha: How Cops Caught Saif Ali Khan Attack Suspect",
+        "content": "Undone by a paratha. And the digital payments infrastructure. That was how Shariful Islam Shehzad, the man accused of stabbing Saif Ali Khan six times - in a suspected attempted burglary incident - was tracked down and arrested by Mumbai Police.",
+        "confidence": 1.0
+      },
+      {
+        "title": "From Saddam To Shivshankar: Muslim Man Converts To Hinduism To Marry Lover",
+        "content": "A 34-year-old Muslim man here converted to Hinduism to marry his girlfriend with whom he had an affair for the past 10 years, changing his name from Saddam to Shivshankar, police said on Monday.",
+        "confidence": 0.27420305864764294
+      },
+      {
+        "title": "Saif stabbing case: Accused slept soundly, changed clothes after attack, say police",
+        "content": "Shehzad, 30-year-old man arrested for stabbing Saif Ali Khan, slept soundly after attack, changed clothes, and headed to Thane",
+        "confidence": 1.0
+      },
+      {
+        "title": "Saif Ali Khan attack: Mumbai police likely to recreate crime scene with accused",
+        "content": "The accused in the high-profile case, a 30-year-old Bangladeshi man, was arrested on Sunday (January 19, 2025) morning from neighbouring Thane city.",
+        "confidence": 1.0
+      },
+      {
+        "title": "Bengaluru city police review security after bank robberies in Bidar, Mangaluru",
+        "content": "In addition to patrolling, police checked on commercial establishments, including late-night stores and ATMs ensuring their security arrangements were intact.",
+        "confidence": 0.36267350667707887
+      },
+      {
+        "title": "I am not a culprit, says ‘suspect’ in Saif Ali Khan stabbing case",
+        "content": "Kanojiya’s photos had gone viral by the time the news of alleged attacker — Mohammad Shariful Islam Shehzad, a Bangladeshi national who had illegally entered India and changed his name to Bijoy Das — poured in",
+        "confidence": 0.509245586873196
+      }
+    ],
+    "keywords": [
+      "saif",
+      "khan",
+      "ali",
+      "man",
+      "stabbing"
+    ],
+    "article_count": 6
+  },
+  "cluster_7": {
+    "articles": [
+      {
+        "title": "Curious Case Of Chandratara: Elephant With Cross-Border Ownership Claims",
+        "content": "A domesticated elephant is at the centre of a cross-border ownership claim.",
+        "confidence": 0.5692319092262693
+      },
+      {
+        "title": "Pollution case: Supreme Court asks if there’s embargo on the number of vehicles a person can own in the same city",
+        "content": "Apex court asks if building laws restrict permission on vehicle ownership to residential, commercial complexes unless there are adequate parking spots",
+        "confidence": 1.0
+      },
+      {
+        "title": "Steps sought to address traffic congestion in Kochi",
+        "content": "Ernakulam ranked 50th globally in traffic congestion; experts stress the need for a shift to\npublic transport, adequate parking spaces and wider and encroachment-free roads",
+        "confidence": 0.49683279806315755
+      },
+      {
+        "title": "Study reveals alarming levels of physicochemical pollutants, pesticides and heavy metals in Arkavati",
+        "content": "",
+        "confidence": 1.0
+      },
+      {
+        "title": "Residents of Veerasamy Street in Egmore raise a stink over garbage",
+        "content": "",
+        "confidence": 1.0
+      }
+    ],
+    "keywords": [
+      "ownership",
+      "congestion",
+      "traffic",
+      "elephant",
+      "parking"
+    ],
+    "article_count": 5
+  },
+  "cluster_9": {
+    "articles": [
+      {
+        "title": "Hyderabad Man Shot Dead In US, Was Looking For A Job",
+        "content": "A man from Hyderabad was shot dead in the United States on Monday in a suspected firing by assailants in Washington DC.",
+        "confidence": 0.6280854649249705
+      },
+      {
+        "title": "Iran Sentences Pop Singer To Death For \"Insulting\" Prophet Muhammed",
+        "content": "An Iranian court has sentenced popular singer Amir Hossein Maghsoudloo, known as Tataloo, to death on appeal after he was convicted of blasphemy.",
+        "confidence": 1.0
+      },
+      {
+        "title": "Zoho CEO's \"Risk Analysis\" Post After Paragliding Accident Kills Entrepreneur",
+        "content": "Jeyesh Ram, the son of Sridhar Vembu's close friends, died in a paragliding accident in Kullu, Manali, on Friday.",
+        "confidence": 1.0
+      },
+      {
+        "title": "Iran Sentences Pop Singer To Death For \"Insulting\" Prophet Muhammed",
+        "content": "An Iranian court has sentenced popular singer Amir Hossein Maghsoudloo, known as Tataloo, to death on appeal after he was convicted of blasphemy.",
+        "confidence": 0.8435287024314619
+      }
+    ],
+    "keywords": [
+      "singer",
+      "death",
+      "was",
+      "prophet",
+      "tataloo"
+    ],
+    "article_count": 4
+  },
+  "cluster_13": {
+    "articles": [
+      {
+        "title": "Gavaskar Hits Bullseye, Explains Reason Behind Samson Champions Trophy Snub",
+        "content": "Sanju Samson has played just 16 ODIs in nearly a decade, scoring 510 runs at an average of 56.66 and a strike-rate of 99.60 with a hundred and three fifties to show for his efforts.",
+        "confidence": 1.0
+      },
+      {
+        "title": "Kerala bag crown at dragon boat championship",
+        "content": "",
+        "confidence": 1.0
+      },
+      {
+        "title": "Madras, Pongal and Test cricket — a savoured link of the past",
+        "content": "",
+        "confidence": 1.0
+      }
+    ],
+    "keywords": [
+      "samson",
+      "16",
+      "link",
+      "champions",
+      "bullseye"
+    ],
+    "article_count": 3
+  },
+  "cluster_3": {
+    "articles": [
+      {
+        "title": "Lucknow Super Giants Announce New Captain For IPL 2025: \"Best Player...\"",
+        "content": "Indian cricket team wicket-keeper batter Rishabh Pant has been appointed Lucknow Super Giants (LSG) skipper for the Indian Premier League (IPL) 2025 season.",
+        "confidence": 0.9733086205065936
+      },
+      {
+        "title": "Lucknow Super Giants Announce New Captain For IPL 2025: \"Best Player...\"",
+        "content": "Indian cricket team wicket-keeper batter Rishabh Pant has been appointed Lucknow Super Giants (LSG) skipper for the Indian Premier League (IPL) 2025 season.",
+        "confidence": 1.0
+      },
+      {
+        "title": "India at forefront of age defined by tech evolution: WEF report",
+        "content": "The Centre for the Fourth Industrial Revolution (C4IR) India launched its 6-year impact journey report on the inaugural day of the World Economic Forum Annual meeting 2025.",
+        "confidence": 1.0
+      },
+      {
+        "title": "India slips to 3rd place on trust barometer; low-income group less trusting than richer counterparts",
+        "content": "The overall list for trust of the general population in the government, businesses, media and NGOs was again topped by China, while Indonesia replaced India for the second spot by virtue of an increased score despite the Indian score remaining unchanged.",
+        "confidence": 0.9719977244003101
+      },
+      {
+        "title": "TikTok ban: Why did India ban TikTok five years ago?",
+        "content": "In June 2020, TikTok was banned in India on national security grounds; the Ministry of Electronics and IT opposed the misuse of mobile apps for stealing and surreptitiously transmitting users’ data in an unauthorised manner",
+        "confidence": 1.0
+      },
+      {
+        "title": "How is TRAI and the govt. combating spam? | Explained",
+        "content": "How will blockchain technology effectively counter spam? What are some of the steps being taken by the government against unsolicited commercial communications? Have some of the measures already taken been effective against unwanted calls and messages? What is a do-not-disturb registry?",
+        "confidence": 0.8365875287369972
+      },
+      {
+        "title": "2025 likely to be a sweet year for mango growers",
+        "content": "The Mango Board after a meeting with the technical committee has predicted a total mango yield of 12 lakh to 13 lakh metric tonnes for 2025.",
+        "confidence": 0.9645235063512066
+      },
+      {
+        "title": "Indian cryptography research gears up to face the quantum challenge",
+        "content": "Areas where Indian researchers are working extensively include communication complexity, proof complexity, and algebraic coding theory",
+        "confidence": 0.9822424304294696
+      },
+      {
+        "title": "CapitaLand to develop ₹450-crore IT park in Hyderabad",
+        "content": "",
+        "confidence": 1.0
+      },
+      {
+        "title": "Flipkart co-founder Sachin Bansal’s startup Navi Technologies cheated of ₹14.26 crore",
+        "content": "The company was founded by Sachin Bansal after his exit from Flipkart",
+        "confidence": 1.0
+      },
+      {
+        "title": "The Chennai firm that turns out all too familiar toothbrush",
+        "content": "The brand used by millions is made by Rialto Enterprises, the manufacturing and engineering division of the Rayala Group, for Procter & Gamble. The Rayala Group started as Rayala Corporation in 1948. At first, it focused on automotive spare parts and office equipment",
+        "confidence": 1.0
+      }
+    ],
+    "keywords": [
+      "indian",
+      "the",
+      "2025",
+      "for",
+      "india"
+    ],
+    "article_count": 11
+  },
+  "cluster_1": {
+    "articles": [
+      {
+        "title": "Nilgiris resident alleges truck parts went missing while vehicle was in police custody",
+        "content": "",
+        "confidence": 1.0
+      },
+      {
+        "title": "Three injured in gas leak at thermal power plant in Thoothukudi",
+        "content": "According to an official from the Police department, the gas leak originated from a pipeline at the plant near the coal handing area",
+        "confidence": 1.0
+      },
+      {
+        "title": "Major gunfight underway between security forces, Maoists at Odisha-Chhattisgarh border",
+        "content": "The forest is located in Chhattisgarh's Gariaband district, adjacent to Odisha's Nuapada district.",
+        "confidence": 1.0
+      },
+      {
+        "title": "Badlapur sexual assault case: Inquiry concludes five cops responsible for accused's death in custody",
+        "content": "The officials involved included senior police inspector Sanjay Shinde of the Thane crime branch, assistant police inspector Nilesh More, head constables Abhijeet More and Harish Tawade and a police driver",
+        "confidence": 0.8801434070427189
+      },
+      {
+        "title": "33 injured as Bengaluru-bound KSRTC bus overturns in Maddur",
+        "content": "The injured passengers were rushed to Maddur taluk hospital for treatment",
+        "confidence": 1.0
+      },
+      {
+        "title": "Soldier critically injured in Sopore gunfight: Army",
+        "content": "Security forces came under fire from hiding militants as the operation, halted for the night, resumed on Monday morning in the Gujjarpatti area of Sopore in Baramulla district",
+        "confidence": 1.0
+      },
+      {
+        "title": "AICC secretary P.V. Mohan injured in road accident in Kerala",
+        "content": "Accident occurred around 2.30 am on Pala-Ramapuram road in Kottayam when his vehicle, on the way to Kochi airport, swerved to avoid a collision with another vehicle",
+        "confidence": 0.9549150616075304
+      },
+      {
+        "title": "Woman sustains serious injuries in auto-two wheeler collision",
+        "content": "",
+        "confidence": 1.0
+      },
+      {
+        "title": "One more ‘mysterious’ death pushes toll to 17 in Rajouri, MHA team arrives in Jammu and Kashmir",
+        "content": "Yasmeen, 15, became the latest victim of unexplained circumstances under which members of three families lost 17 relatives in the past 45 days. While a special investigation team formed by the J&amp;K government is investigating the matter, a Central team of experts arrived in the Union Territory on Sunday (January 19, 2025).",
+        "confidence": 1.0
+      },
+      {
+        "title": "Dismiss police officials for Parbhani episode, say Dalit advocates",
+        "content": "They seek rehabilitation of family members of law student Somnath Suryavanshi, who, they claimed, died in police custody",
+        "confidence": 1.0
+      },
+      {
+        "title": "Firing reported during search operation in Kashmir’s Sopore: Police",
+        "content": "Security forces could not immediately confirm the number of militants trapped at the encounter site",
+        "confidence": 1.0
+      },
+      {
+        "title": "Tejashwi Yadav’s political adviser and Rajya Sabha MP Sanjay Yadav gets death threat call",
+        "content": "Mr. Sanjay received the call allegedly from international gangster Joginder Geong on his mobile number when he was busy with the RJD’s National Executive Committee meeting",
+        "confidence": 1.0
+      }
+    ],
+    "keywords": [
+      "in",
+      "police",
+      "injured",
+      "the",
+      "sopore"
+    ],
+    "article_count": 12
+  },
+  "cluster_10": {
+    "articles": [
+      {
+        "title": "Here are the big stories from Karnataka today",
+        "content": "Welcome to the Karnataka Today newsletter, your guide from The Hindu on the major news stories to follow today. Curated and written by Nalme Nachiyar.",
+        "confidence": 1.0
+      },
+      {
+        "title": "Over 500 works at Karnataka Lalitha Kala Academy’s  four-day art exhibition in Bengaluru",
+        "content": "",
+        "confidence": 1.0
+      },
+      {
+        "title": "Light rain to continue in Tamil Nadu till Thursday",
+        "content": "",
+        "confidence": 0.6905289337860326
+      },
+      {
+        "title": "The Hindu Lit for Life 2025: Over 250 artworks took over Lady Andal School campus in an exhibition titled Imprint",
+        "content": "The display explored the medium of paper and how artists interpret it in their practice",
+        "confidence": 0.7713096687925193
+      }
+    ],
+    "keywords": [
+      "today",
+      "karnataka",
+      "exhibition",
+      "stories",
+      "over"
+    ],
+    "article_count": 4
+  },
+  "cluster_11": {
+    "articles": [
+      {
+        "title": "Stalin writes to Union Education Minister, CMs of non-BJP-ruled States against draft UGC regulations",
+        "content": "In his letter to his counterparts in non-BJP-ruled States, Mr. Stalin referred to the resolution adopted in the Tamil Nadu Assembly against the draft UGC regulations",
+        "confidence": 0.8754241482795618
+      },
+      {
+        "title": "Telangana delegation led CM Revanth Reddy lands in Davos, meets AP CM Chandrababu Naidu",
+        "content": "The Andhra Pradesh delegation led by Chief Minister N Chandrababu Naidu also reached the airport at the same time when Mr. Reddy’s team landed",
+        "confidence": 0.9630833065502392
+      },
+      {
+        "title": "T.N. CM Stalin to visit Villupuram district on January 27",
+        "content": "During the two-day visit, M.K. Stalin will take part in various government events and inaugurate projects",
+        "confidence": 1.0
+      },
+      {
+        "title": "Telangana CM heads to Davos after successful Singapore visit",
+        "content": "",
+        "confidence": 1.0
+      }
+    ],
+    "keywords": [
+      "stalin",
+      "cm",
+      "visit",
+      "regulations",
+      "delegation"
+    ],
+    "article_count": 4
+  },
+  "cluster_2": {
+    "articles": [
+      {
+        "title": "Kerala govt to disburse two instalments of social security, welfare fund board pensions from Jan 24",
+        "content": "Instalments account for social security pension for January and a pending monthly instalment",
+        "confidence": 0.5862113753446407
+      },
+      {
+        "title": "Utilize the benefits of Surya Ghar scheme, says Vizianagaram District Collector",
+        "content": "The excess power generated by the homes can be sold the AP Transco, the District Collector said",
+        "confidence": 0.7239607180458794
+      },
+      {
+        "title": "Issues raised in 12.80 lakh petitions under ‘Makkaludan Mudhalvar’ resolved: T.N. Minister",
+        "content": "The ‘Makkaludan Mudhalvar’ initiative has been implemented in 12,525 village panchayats through 2,344 camps so far, Revenue Minister K.K.S.S.R. Ramachandran said in a statement",
+        "confidence": 1.0
+      },
+      {
+        "title": "Actor-politician Vijay at Parandur: DMK ‘staging drama’ with conflicting positions on farmers’ issues, says TVK president",
+        "content": "Mr. Vijay said he was not against developmental projects but they should not come at the cost of environmental degradation",
+        "confidence": 0.8266275005472965
+      },
+      {
+        "title": "Supreme Court asks petitioner seeking exclusive Ministry for senior citizens to approach Government",
+        "content": "“By 2050, the share of older persons will double to 20.8%, with the absolute number at 34.7 crore,” the petition said",
+        "confidence": 0.5728365082521791
+      },
+      {
+        "title": "Kerala Assembly pays homage to former Prime Minister Manmohan Singh",
+        "content": "Kerala Assembly remembers Manmohan Singh as a liberal-minded Prime Minister, an internationally respected economist who steered India’s economic reforms and a resolute statesman",
+        "confidence": 0.6006131493190724
+      },
+      {
+        "title": "NPS employees announce dharna on February 7",
+        "content": "The Karnataka State Government NPS Employees Association has announced a dharna on February 7 if the State Government does not announce scrapping of New Pension Scheme",
+        "confidence": 0.5862113753446407
+      },
+      {
+        "title": "Telangana Deputy CM assures transparency in welfare schemes; rollout from January 26",
+        "content": "",
+        "confidence": 0.71639942288903
+      },
+      {
+        "title": "Double engine BJP govt. alone can deliver corruption-free governance: Kishan Reddy",
+        "content": "",
+        "confidence": 1.0
+      },
+      {
+        "title": "Coalition government in Andhra Pradesh should categorically oppose privatisation of Visakhapatnam Steel Plant, says Botcha",
+        "content": "The YSRCP leader questions sincerity of the NDA leaders on the issue",
+        "confidence": 0.9721945609322998
+      },
+      {
+        "title": "Kudumbashree children’s summit on zero waste management concludes",
+        "content": "",
+        "confidence": 0.5169522694728208
+      },
+      {
+        "title": "Not job of primary head teachers to provide mid-day meals: Pannian",
+        "content": "Mr. Ravindran said it was the government’s job to provide mid-day meals; it was not a scheme to be run using money from head teachers",
+        "confidence": 0.7533332564225931
+      }
+    ],
+    "keywords": [
+      "government",
+      "not",
+      "said",
+      "the",
+      "scheme"
+    ],
+    "article_count": 12
+  },
+  "cluster_12": {
+    "articles": [
+      {
+        "title": "Pained to see son unable to bury father in village moving apex court: Supreme Court",
+        "content": "The Bench was hearing a plea filed by Ramesh Baghel, challenging an order of the Chhattisgarh High Court which disposed of his plea seeking burial of his father",
+        "confidence": 1.0
+      },
+      {
+        "title": "Yasin Malik trial: Supreme Court orders two High Courts to ensure proper video-conferencing facilities at Jammu court",
+        "content": "The top court also directed the registrar general of the Delhi High Court to ensure proper video-conferencing facilities at Tihar jail also",
+        "confidence": 0.9727184557471682
+      },
+      {
+        "title": "Lakhimpur Kheri killings case: Supreme Court orders police to probe allegations Ashish Mishra is influencing witnesses",
+        "content": "Supreme Court orders Lakhimpur Kheri SP to conduct enquiry and submit report; families of victims seek cancellation of Ashish Mishra’s bail",
+        "confidence": 1.0
+      },
+      {
+        "title": "SC stays criminal defamation proceedings against Rahul Gandhi in Jharkhand",
+        "content": "The case was filed against his allegedly defamatory remarks against Home Minister Amit Shah",
+        "confidence": 1.0
+      }
+    ],
+    "keywords": [
+      "court",
+      "supreme",
+      "high",
+      "orders",
+      "video"
+    ],
+    "article_count": 4
+  },
+  "cluster_4": {
+    "articles": [
+      {
+        "title": "Delhi Assembly polls: AAP mocks BJP with launching of blank book  ‘Achievements of BJP in Delhi’",
+        "content": "In a press conference, AAP leader Sanjay Singh was referring to different promises made by Prime Minister Narendra Modi in the past.",
+        "confidence": 0.8516791163987524
+      },
+      {
+        "title": "Lok Sabha speaker Om Birla expresses concern over fewer sittings of legislative bodies",
+        "content": "Om Birla's remarks came amid reports that the Delhi Assembly held a mere 74 sittings in its entire five-year tenure",
+        "confidence": 0.8516791163987524
+      },
+      {
+        "title": "If Boeing deliveries were timely, more of our pilots would be flying, says Akasa Air CEO Vinay Dube",
+        "content": "Most of the 300 pilots benched at the airline will fly by 2025 end; CEO declined to divulge number of deliveries expected this calendar year",
+        "confidence": 1.0
+      },
+      {
+        "title": "First draft of Indian history written by colonisers with distorted perspective: Dhankhar",
+        "content": "Jagdeep Dhankhar also said that the first draft of the country's history came through colonisers' distorted perspective.",
+        "confidence": 0.7642537682939935
+      },
+      {
+        "title": "NCLT orders liquidation of Go First airline",
+        "content": "In August, Go First's lenders had decided to liquidate the company's assets after rejecting bids by interested suitors to revive the bankrupt airline, Reuters had reported, citing sources",
+        "confidence": 0.863994187756223
+      },
+      {
+        "title": "People of Delhi suffering in battle of supremacy between AAP government, Centre: Sachin Pilot",
+        "content": "Sachin Pilot exuded confidence that the people of Delhi will vote for the Congress this time.",
+        "confidence": 1.0
+      },
+      {
+        "title": "Internal tussle in BJP reaches a flashpoint with Vijayendra’s supporters deciding to visit Delhi to seek expulsion of Yatnal and Ramesh Jarkiholi",
+        "content": "Vijayendra’s supporters have decided to hold a meeting in Bengaluru on Saturday before their Delhi visit",
+        "confidence": 0.6819642632297823
+      }
+    ],
+    "keywords": [
+      "delhi",
+      "of",
+      "first",
+      "airline",
+      "aap"
+    ],
+    "article_count": 7
+  },
+  "cluster_8": {
+    "articles": [
+      {
+        "title": "SC asks Kerala, Tamil Nadu to address on which committee will be ‘more effective’ to watch over Mullaperiyar dam",
+        "content": "The court listed the case for hearing detailed submissions on February 19.",
+        "confidence": 0.3939366395133655
+      },
+      {
+        "title": "NMC's moves baffling: Congress on 'relaxing of norms' for faculty recruitment",
+        "content": "Jairam Ramesh shared on X a media report which claimed the National Medical Commission has proposed easing rules for appointing of non-teaching consultant doctors and diploma holders as medical college faculty",
+        "confidence": 1.0
+      },
+      {
+        "title": "Students warn against changing higher secondary exam time",
+        "content": "",
+        "confidence": 0.403778291430524
+      },
+      {
+        "title": "After Kharge’s reprimand, Ministers become cagey about leadership issue",
+        "content": "",
+        "confidence": 1.0
+      },
+      {
+        "title": "KPCC panel seeks to focus on local body polls and beyond",
+        "content": "Political affairs committee meeting on Sunday aspires to identify organisational weaknesses and ensure better cohesion with alliance partners at the ward level.",
+        "confidence": 1.0
+      }
+    ],
+    "keywords": [
+      "on",
+      "faculty",
+      "medical",
+      "committee",
+      "which"
+    ],
+    "article_count": 5
+  },
+  "cluster_14": {
+    "articles": [
+      {
+        "title": "Kerala minor girl abuse: One more arrested as number of accused detained in case rises to 57",
+        "content": "Two of the accused remain at large as they are reportedly abroad",
+        "confidence": 1.0
+      },
+      {
+        "title": "Four arrested for offering namaz while prohibitory orders in place in Bareilly",
+        "content": "A case was registered against seven persons and others for the incident that happened while prohibitory orders were in force in the district in view of festivities and upcoming Republic Day celebrations",
+        "confidence": 1.0
+      },
+      {
+        "title": "Two taken into custody for attacking house of Chendamangalam murder accused",
+        "content": "",
+        "confidence": 1.0
+      }
+    ],
+    "keywords": [
+      "prohibitory",
+      "accused",
+      "while",
+      "arrested",
+      "in"
+    ],
+    "article_count": 3
+  }
+}
